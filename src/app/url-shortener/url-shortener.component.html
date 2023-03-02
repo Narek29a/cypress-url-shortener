@@ -1,0 +1,13 @@
+<div class="content">
+  <mat-form-field appearance="outline">
+    <mat-label>Input The URL</mat-label>
+    <input matInput [formControl]="urlFormControl">
+    <mat-icon style="margin-left: 9px" matSuffix>link</mat-icon>
+  </mat-form-field>
+  <button [disabled]="urlFormControl.invalid" mat-raised-button color="primary"
+          (click)="getShortenedUrl(urlFormControl.value)">Send</button>
+  <mat-list role="list" *ngIf="shortenedURL$ | async as shortenedURL">
+    <mat-list-item role="listitem" >Short url: <a target="_blank" href="{{'https://'+shortenedURL.result.short_link}}"> {{shortenedURL.result.short_link}}</a></mat-list-item>
+    <mat-list-item role="listitem">Short url 2: <a target="_blank" href="{{'https://'+shortenedURL.result.short_link2}}"> {{shortenedURL.result.short_link2}}</a></mat-list-item>
+  </mat-list>
+</div>

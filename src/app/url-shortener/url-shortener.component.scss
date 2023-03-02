@@ -1,0 +1,23 @@
+.content {
+  width: 80%;
+  margin: 40px auto auto auto;
+  button{
+    margin-left: 5%;
+    width: 142px;
+    height: 39px;
+  }
+}
+mat-form-field {
+  width: 50%;
+}
+@media screen and (max-width: 700px){
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+mat-list-item {
+  a{
+    margin-left: 10px;
+  }
+}
