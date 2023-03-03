@@ -12,6 +12,6 @@ export interface UrlShortenerResultModel {
 
 }
 export interface UrlShortenerModel {
-  resStatus: boolean;
+  ok: boolean;
   result: UrlShortenerResultModel;
 }
